@@ -3,8 +3,9 @@
 ##Summary
 The homology search service will enable a user to rapidly query a database of protein sequence data stored in the KBase database for an input set of protein sequences. The service will ultimately support a variety of global NRs compiled from numerous data sources, and it will support queries against user-uploaded sequence data as well. The homology search functionality will be available in two places: (i) the search page on KBase.us, accessible without a KBase account; and (ii) as a method in the KBase narrative. On the search page, users will be able to paste in one or more protein sequences. The search will run on the fly, and results will appear on screen as a table of homologous genes found for each query sequence. Users will be able to select results and either: (i) download in FASTA or TSV format, or (ii) copy into an existing narrative as an object. In the narrative, the user can upload a fasta file as a feature set, or they can search for features in the search page and copy to a narrative as a feature set. Users can then run the “Protein Homology Search” method using either a feature set or direct sequence data as input. Users will be able to select an NR, set search parameters, and then run the search a-synchronously. Results will appear and be viewable in the narrative in a variety of formats.
 
-+Team lead: Maulik
-+Team: Maulik, Fangfang, Harry (UI), Bob O.
++ Team lead: Maulik
+
++ Team: Maulik, Fangfang, Harry (UI), Bob O.
 
 ##Extended description
 The proposed “Homology Search Services” are designed to allow a user to search for homologous proteins for a query sequence in a variety of data-sources in KBase, including: (i) user genomes; (ii) reference genomes in KBase; and (iii) a set of external data NRs. The service will return lists of homologous proteins and sequence alignment parameters, with speed depending on the search algorithm selected. This is immediately useful to users who simply want to use KBase to get a list of homologs for a gene of interest. However, the primary goal of this service is to facilitate the exploration of potential protein function, which has greatly influenced our design of peripheral support methods for the homology-search user experience. A detailed timeline of all planned features is provided in the following section.
@@ -37,6 +38,8 @@ https://narrative-ci.kbase.us/narrative/ws.3594.obj.1
 <br/>
 
 ##Citations to code sources
-1.) BLAST
-2.) DIAMOND
-3.) Kmer-based search (SEED)
++ BLAST
+
++ DIAMOND
+
++ Kmer-based search (SEED)
