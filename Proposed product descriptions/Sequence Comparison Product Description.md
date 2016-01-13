@@ -108,13 +108,13 @@ mock graphics below.
 
 ### DNA sequence comparison
 
-![Image of DNAdiff similarity matrix](https://github.com/kbase/comparative_genomics/docs/images/DNAdiff-matrix.png)
+![Image of DNAdiff similarity matrix](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/DNAdiff-matrix.png)
 
-![Image of DNAdiff report](https://github.com/kbase/comparative_genomics/docs/images/DNAdiff-report.png)
+![Image of DNAdiff report](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/DNAdiff-report.png)
 
 ### Whole genome alignment
 
-![Image of Genome Rearrangement](https://github.com/kbase/comparative_genomics/docs/images/Genome-rearrangements.png)
+![Image of Genome Rearrangement](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/Genome-rearrangements.png)
 
 ##Citations to code sources
 + DNAdiff
