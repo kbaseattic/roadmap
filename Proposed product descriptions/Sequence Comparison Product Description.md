@@ -102,9 +102,10 @@ for tree building.
 
 ##Narrative mockup
 
-The simple input widget of these two methods will allow a user to
-select multiple genomes. The output for each method is presented in
-mock graphics below.
+The input widget of these two methods will allow a user to select two
+or more genomes a la the proteome comparison and the pangenome
+methods. The output for each method is presented in mock graphics
+below.
 
 ### DNA sequence comparison
 
