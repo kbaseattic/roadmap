@@ -158,4 +158,5 @@ manage Method Reference Data. The viewers can be created in the SDK
 generated repository and dynamically deployed into the Narrative. Method
 Reference Data we are defining as data initialized by the method when it
 is registered and is used when the method runs (e.g. a BLAST database).
-Other work would include using the SDK to define workflows or pipelines.
+Other work would include using the SDK to define workflows or pipelines. 
+Upload functions can also be converted to SDK methods.
