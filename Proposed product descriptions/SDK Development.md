@@ -1,4 +1,5 @@
-**Summary**
+Summary
+=======
 
 Our proposed work will consolidate all code for a new method into a
 single repository and allow the developer to test and deploy code into a
@@ -149,7 +150,8 @@ process documents relating to adding 3^rd^ party tools.
 
 **Timeline**
 
-**Future Work**
+Future Work
+===========
 
 We imagine that we can extend the SDK to handle UI View Widgets and to
 manage Method Reference Data. The viewers can be created in the SDK
