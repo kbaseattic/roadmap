@@ -11,7 +11,7 @@ Story
 =====
 
 A key factor in the success of KBase is the ease of adding new
-functionality to the system by both KBase developers and 3^rd^ parties.
+functionality to the system by both KBase developers and 3rd parties.
 Our KBase core platform has developed and stabilized significantly and
 we are now at a point in our development where increasing the scientific
 functionality is our most critical need. While there are many obstacles
@@ -144,7 +144,7 @@ including text, a web-based format, slides, and videos. Additionally,
 developers will also need documentation on KBase itself, an architecture
 overview, data types, core platform services APIs, the Narrative, and
 documents covering KBase policy. Especially important are the policy and
-process documents relating to adding 3^rd^ party tools.
+process documents relating to adding 3rd party tools.
 
 **User Stories**
 
