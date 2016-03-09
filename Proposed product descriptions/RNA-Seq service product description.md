@@ -1,11 +1,11 @@
-#RNA-Seq Service Product Description
+# RNA-Seq Service Product Description
 
-##Summary
+## Summary
 The present version of RNA-Seq service (RNA-Seq v1.0) is essentially an implementation of the RNA-Seq Tuxedo protocol for prokaryotes and eukaryotes. Currently, it provides an integrated computational workflow for RNA-Seq based gene expression analysis for microbes and flagship plant genomes. This service aligns the RNA-Seq reads, assigns aligned reads to genes and performs differential gene expression analysis to detect differential transcript abundances between tissues, developmental stages, genetic backgrounds, and environmental conditions.
 
 Ultimately this service will support a wide range of transcriptome data analysis needs such as gene discovery and annotation, gene fusion detection, allele-specific expression, and de novo transcriptome assembly.
 
-##Extended Description
+## Extended Description
 RNA-Seq pipeline allows the user to upload raw sequence reads from an experiment that involves two or more conditions. Next the reads are mapped to a reference genome using Bowtie2 for microbes and TopHat for plant genomes. The read alignments per sample are provided as input to Cufflinks, which assembles the alignments to  transcripts. TopHat and Cufflinks are run on each individual sample and biological replicates independently. Then, the independently assembled transcripts from each sample are merged using Cuffmerge to a unified transcriptome for further analysis. Cuffdiff uses the merged transcriptome and the read alignments from each sample to identify the differentially expressed genes. The outputs from all the above mentioned methods are saved as workspace objects. The Cuffdiff files are visualized using CummeRbund package to facilitate exploration of genes such as density plots, scatter plots, volcano plot, PCA plots, MDS plots etc. 
 
 In nutshell, we would like to have applications and methods that will allow users to run RNA-seq pipeline using Tuxedo protocol (Cufflinks,Cuffmerge,Cuffdiff, CummeRbund) that follows these steps:
@@ -28,7 +28,7 @@ Note: RNA-seq pipeline using the Tuxedo protocol requires the reference genome a
 Citation: Trapnell C, Roberts A, Goff L, Pertea G, Kim D, Kelley DR, Pimentel H, Salzberg SL, Rinn JL, Pachter, L (2012) Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. Nature Protocols, 7(3), 562 578. http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3334321/
 
 
-##Timeline for feature release
+## Timeline for feature release
 + Merge ‘Setup RNA-Seq Analysis’  and ‘Associate Reads to RNASeqSample’ methods - Jan 31 , 2016
 + Merge ‘Align Reads to Tophat’ and ‘View Alignment Statistics’ methods - Jan 31, 2016
 + Merge ‘Assemble Transcripts using Cufflinks’ and ‘View Expression Histogram’ methods - Jan 31, 2016
@@ -45,7 +45,7 @@ Citation: Trapnell C, Roberts A, Goff L, Pertea G, Kim D, Kelley DR, Pimentel H,
 
 
 
-##User Stories
+## User Stories
 
 1. E. coli User story:
 
