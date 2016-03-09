@@ -18,8 +18,8 @@ A mocked-up Narrative (written in Markdown) that:
   3. If the new functionality requires management or analysis of data then exemplar data sets and their logic for inclusion and testing must be made available and uploaded if possible into the mock-narrative. 
   4. The new functionality is improved experience then the Narrative should be "annotated" to describe how the platform improvement would improve that experience. Many times the improvement might not directly impact the Narrative experience and that is ok as long as the improvement is described in the Narrative. 
 
-### Citation
-Citation to core external codes to be incorporated and proof of open-source
-
 ### Test plan
 Should include both internal testing and external user testing/user engagement.
+
+### Citations
+Citation to core external codes to be incorporated and proof of open-source
