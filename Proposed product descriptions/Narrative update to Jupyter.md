@@ -2,7 +2,7 @@
 The Narrative Interface is currently backed by IPython v.1.2.1. This update will result in a release of the Narrative that will be backed by Jupyter Notebook v.4.1.0. This will result in:  
   * Increased stability and security of the server.
   * Adoption of countless changes that have happened in the IPython/Jupyter notebook community in the past few years.
-  * Improved ability for users to use Jupyter code cells to access KBase functionality, and also create their own using commonly available libraries (e.g. Plot.ly, matplotlib, pandas, numpy, R, etc.).  
+  * Improved ability for users to use Jupyter code cells to access KBase functionality, and also use commonly available libraries (e.g. Plot.ly, matplotlib, pandas, numpy, R, etc.).  
 
 This product will also include a tighter coupling between the Narrative Interface and other aspects of the KBase user interface. This includes a clear integration with a host of interactive display widgets for interacting with data objects in the Narrative, and tools for third party developers to build their own widgets in the KBase SDK.
 
@@ -11,7 +11,7 @@ The Narrative Interface (NI) was originally based on the IPython Notebook. Devel
 
 At the same time, other non-Narrative KBase interfaces were developed and grew into their own applications, including data landing pages, and the search interface.
 
-The focus of this update is to refactor the Narrative Interface in the following ways. First, it will be rebuilt to make use of the massive number of changes and community adoption available in the Jupyter Notebook v4.1.0. As a part of this update, the KBase Narrative code will be decoupled as far as possible from the Jupyter Notebook, making future updates easier. Having the ability to keep in step with the Jupyter team will be a great benefit for KBase users. This will eventually give access to multiple kernels for more computational users to directly access KBase resources through the API, and it will enable third party developers who may have familiarity with Jupyter to use that experience to develop for KBase.
+The focus of this update is to refactor the Narrative Interface in the following ways. First, it will be rebuilt to make use of the massive number of changes and community adoption available in the Jupyter Notebook v.4.1.0. As a part of this update, the KBase Narrative code will be decoupled as far as possible from the Jupyter Notebook, making future updates easier. Having the ability to keep in step with the Jupyter team will be a great benefit for KBase users. This will eventually give access to multiple kernels for more computational users to directly access KBase resources through the API, and it will enable third party developers who may have familiarity with Jupyter to use that experience to develop for KBase.
 
 In parallel with the Narrative update, other user interface tools will be created to allow KBase (and third party) developers to build and submit interactive widgets for consuming and displaying data objects. This entails a complete UI developer toolkit and API for building widgets using various JavaScript libraries. At first, these components will be stored in the KBase organization repositories in Github, but with coordination with the SDK efforts, will expand to the Module Catalog service (not as a part of this initial product).
 
