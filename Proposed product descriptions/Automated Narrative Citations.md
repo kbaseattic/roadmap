@@ -24,9 +24,11 @@ References should follow the XXX format, appearing in the order in which they ar
 
 ### Narrative Mockup
 
+Design mocks should be produced as part of the work.
+
 ### Timeline
 
-One sprint
+One-two sprints
   1. Design and mockup the area that would show the references, link them to the proper cells, and serialize them in the Narrative typed object.
   2. Test this design mockup with KBase internal scientists.
   3. (Optionally) iterate on design.
@@ -35,4 +37,8 @@ One sprint
 
 ### Test Plan
 
+This will be in two forms - user testing with a prototype, asking for simple tasks to be performed (Find the list of references, add one), and unit and integration testing of the code changes.
+
 ### Citations
+
+N/A - this is an internal change with code we're writing.
