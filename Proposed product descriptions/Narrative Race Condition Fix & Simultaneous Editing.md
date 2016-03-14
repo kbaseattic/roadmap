@@ -5,6 +5,7 @@ The Narrative offers poor support for simultaneous editing and currently has a d
 
 ### Story / Description
 This proposed product offers several steps towards first mitigating the immediate race condition issue then improving the UX so that simultaneous editing is better supported.  The incremental products are:
+
 1.  Overwrite detection - warn and prevent save operation if latest version is out of date
 2.  Narrative merging - if a collision is detected, offer to sync and merge in any updates and clearly highlight conflicts
 3.  Request narrative “Lock” for some specified amount of time (may not be necessary if (1) and (2) work well)
