@@ -1,0 +1,22 @@
+#Identify and deploy high value tools with low cost - Kinetic modeling integration with Maranas group
+
+##Summary
+The Maranas group has developed techniques for constructing and analyzing genome-scale kinetic models of microorganisms. We are proposing to work with this team to use the SDK to enable these models to be loaded and run in KBase. We will design a new KineticModel type, which will consist of kinetic parameters associated with reaction IDs, all linked to an existing model. Users can load the parameters as a tab delimited table. Once loaded, we will add a method to the narrative called "simulate kinetic model". You will provide the method with a kinetic model, a media formulation, an FBA solution with an existing reference flux, and a set of perturbations (e.g. reaction KO, knockdown, overexpression). The method will then simulate the relaxation of the model to a new steady state. We will also add an editor for the kinetic model, and an uploader for FBA to permit the upload of reference flux. Flux and metabolite changes during model relaxation will be visualized. Ultimately, we may add methods for constructing new kinetic models by doing ensemble kinetic modeling to fit uploaded phenotype data. But this is a long term goal.
+
+##Extended description
+To be worked out with Costas's team.
+
+##Timeline for feature release
+To be worked out with Costas's team.
+
+##User stories
++	A biochemist at UF hypothesizes a new side reaction for PanB, involving a recycle reaction in the folate pathway. A kinetic model is loaded, along with a reference wild-type flux profile. Then the model is used to simulate the effect of overexpression of PanB with and without the side reaction, demonstrating that the model with the side reaction is a better fit for experimental data than the model without it. The authors use this analysis as validation for their prediction of the side reaction for PanB (this story is based on a real manuscript recently accepted for publication).
+
+##Narrative mockup
+Not done yet...
+
+##Network mockup
+Not done yet...
+
+##Citations to code sources
+To be worked out with Costas's team.
