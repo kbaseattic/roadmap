@@ -29,6 +29,7 @@ Review and prototype additional tools that reduce compute and improve usability.
 ### Test plan
 1. Test scalability for 50-100 samples for bulk upload
 2. Test scalability for 50-100 samples for all compute-intensive methods, incl. alignment
+
 ### Citations
 1. STAR: http://bioinformatics.oxfordjournals.org/content/early/2012/10/25/bioinformatics.bts635
 2. EdgePro: http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3603529/
