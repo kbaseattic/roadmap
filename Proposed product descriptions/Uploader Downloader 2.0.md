@@ -1,11 +1,11 @@
 Uploader Downloader 2.0 Product Description
 
 ##Summary
-Uploader Downloader 2.0 aims to deliver improvements to the upload and download capabilities in the narrative interface.  This will be delivered in two phases.  In phase one bug fixes and minor improvements to the existing funtionality will occur.  In phase two we will design and implement bulk upload and download capabilities.  
+Uploader Downloader 2.0 aims to deliver improvements to the reliability and usability of the upload and download capabilities in the narrative interface.  
 
 + Team lead: Dan O.
 
-+ Team: Ryan, Bob, Harry, Tom, Bruce, Gordon
++ Team: Ryan, Bob, Harry, Tom, Ryan, Maulik
 
 ##Extended description
 #Phase I
@@ -17,10 +17,6 @@ During this phase we will focus on:
 + Bugfixes
 + Increasing the maximum data sizes for existing uploads
 
-#Phase II
-During this phase we will focus on:
-+ Performance optimization
-+ Bulk uploads/downloads
 
 ##Timeline for feature release
 + January 14: Generate testing report
@@ -29,12 +25,11 @@ During this phase we will focus on:
 + February 12: Generate testing report
 + February 19: deploy fixes/updates for items detected in testing report to narrative-ci
 + February 26: deploy fixes/updates for items detected in testing report to production
-+ Phase II TBD
 
 ##User stories
-+	User Mike would like to upload a 20GB raw read file. (Phase I)   
++	User Mike would like to upload 10gb read files without generating errors.
 
-+	User Rick would like to upload 100 raw read files.  Rick would like to be able to import the files into the system as one bulk operation.
++	User Rick would like to download FBA Models without generating errors.
 
 ##UD 2.0 mockup
 
