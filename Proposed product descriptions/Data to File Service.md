@@ -25,14 +25,14 @@ Because the SDK methods will be running on already provisioned compute, it is de
 
 It should be easy to add a new converter, without requiring a redeploy of the KBase platform.
 
-Developers should be able to browse all the available object to file converters.
+Developers should be able to easily browse all the available object to file converters.
 
 ### User Stories
 As a developer, I would like to be able to easily generate a file from a KBase typed object to use as input to a command line program.
 
 As a developer, I would like access to tools/methods to convert between common file formats.
 
-As a developer, I would like to save a 
+As a developer, I would like to easily add my own converter. 
 
 ### Narrative Mockup
 N/A
