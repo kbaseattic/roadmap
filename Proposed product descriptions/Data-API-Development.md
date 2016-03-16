@@ -20,7 +20,7 @@ planned new service. He goes to the Github `kbase/data_api` repository and finds
 detailed instructions on how to fork the repo and create a skeleton of the Python library and client/server.
 This uses standard Python installation procedures. He is able to immediately get started running and testing 
 a "hello, world" API that gives him confidence in his development environment. From there, he follows the guidelines
-for how to properly build in the base "ObjectAPI" class to specify and implement his interface. When he feels
+for how to properly build off the base "ObjectAPI" class to specify and implement his interface. When he feels
 like he has something working, he submits a pull request from his fork. The lead of the Data API team informs him
 that although his API looks OK, he also needs to update the client APIs for JavaScript and Perl (and eventually Java),
 pointing him to a document that describes this process including how to structure the PR so the linkages are clear.
