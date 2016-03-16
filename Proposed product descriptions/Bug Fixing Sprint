@@ -1,0 +1,21 @@
+## Summary
+Sprint focusing on fixing bugs, particularly those that are reported by multiple external users and that seriously compromise their experience with KBase.
+
+## Description
+
+### Phase 1:
+This sprint should start with a review of the unresolved JIRA tickets (excluding those that request new features or functionality) by the project management and production leads (see Help Desk Dashboard, https://atlassian.kbase.us/secure/Dashboard.jspa?selectPageId=10603). Some of these may be eligible to be closed as Fixed or Obsolete or Won't Fix. The sprint leaders will look for multiple tickets that represent common issues and decide which to address during this sprint. This phase will lead to a prioritized list of top issues and the identification of the developers who could best address them.
+
+### Phase 2:
+The identified bug-fixing team will start working on the bugs, collaborating as much as possible since seemingly unrelated issues can turn out to share root causes. Initially, the bug-fixing teams will include the lead developer of the product in question, as well as other people who can learn by participating in the sprints and watching the experts, so that in the future, these people will have the expertise to attack issues themselves rather than having to wait for the tool developer to look at them. Basically, the bug-fixing sprints will function like “apprenticeships” for these other developers, so that in the future, the responsibility of fixing bugs in existing services can be spread among more people.
+
+### Phase 3:
+A testing team of people other than those who fixed the bugs will test to make sure the bugs that were reported as fixed are really fixed. New test data sets and/or unit tests will be created as needed. The Help Desk team will notify the reporting users that the issues should be fixed.
+
+## Timeline
+This sprint should be held at least once per quarter, possibly more, and should tackle as many as possible of the top-priority issues, depending on how much time the participants can spare.
+
+User Stories (examples)
+* Monica wants to upload FASTA or GenBank sequences to KBase in order to annotate them. When she was unable to do so successfully, she gave up on KBase (see https://atlassian.kbase.us/browse/KBASE-3485).
+* Carol tried to push data from JGI to KBase, but it didn't work (see https://atlassian.kbase.us/browse/KBASE-3851).
+* Martin built metabolic models in KBase but gapfill failed (see, for example, https://atlassian.kbase.us/browse/KBASE-3855).
