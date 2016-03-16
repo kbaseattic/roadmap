@@ -47,4 +47,4 @@ Note: RNA-seq pipeline using the Tuxedo protocol requires the reference genome a
 
 
 ## Citation: 
-[Trapnell C, Roberts A, Goff L, Pertea G, Kim D, Kelley DR, Pimentel H, Salzberg SL, Rinn JL, Pachter, L (2012) Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. Nature Protocols, 7(3), 562 578.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3334321/)
++ [Trapnell C, Roberts A, Goff L, Pertea G, Kim D, Kelley DR, Pimentel H, Salzberg SL, Rinn JL, Pachter, L (2012) Differential gene and transcript expression analysis of RNA-seq experiments with TopHat and Cufflinks. Nature Protocols, 7(3), 562 578.](http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3334321/)
