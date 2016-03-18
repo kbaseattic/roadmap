@@ -46,6 +46,7 @@ Update the RNA-seq pipeline in KBase to make it more modular and scalable (requi
 3. StringTie: http://www.nature.com/nbt/journal/v33/n3/full/nbt.3122.html
 4. DESeq: http://genomebiology.biomedcentral.com/articles/10.1186/gb-2010-11-10-r106
 5. Kallisto: https://pachterlab.github.io/kallisto/about.html
+6. HiSat: http://www.nature.com/nmeth/journal/v12/n4/full/nmeth.3317.html
 
 
 
