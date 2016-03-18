@@ -32,11 +32,9 @@ Update the RNA-seq pipeline in KBase to make it more modular and scalable (requi
 
 ### Platform dependency:
 1. Bulk Uploaders
+  1. Make sure to capture metadata about the samples at upload
 2. Ability to scale a compute-intensive job using multiple AWE workers or HPC
-
-
-### Timeline
-3-4 sprints
+3. JBrowse browser for viewing BAM alignments
 
 ### Test plan
 1. Test scalability for 50-100 samples for bulk upload
