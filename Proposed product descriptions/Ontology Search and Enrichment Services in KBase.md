@@ -5,32 +5,23 @@ Implementation of enrichment services based on standard ontologies such as GO fo
 Data types: Ontology Index, New version of Genome
 
 ### Story/Description
-RNA-SEQ, TN-SEQ, and comparative genomics all produce sets of "related" genes as key "results" of analyses. A core methodology for adding value to these sets is detection of enrichment of features common to these genes. Popular and important features are those that are assigned by standard ontologies such as GO. Methods such as Fisher’s exact tests are used to determine enrichment of such features in subsets of genes from a genome. We will develop the framework for these through development of an ontology service and an initial set of enrichment tests along with visualizations of results.
+RNA-SEQ, TN-SEQ, and comparative genomics all produce sets of "related" genes as key "results" of analyses. A core methodology for adding value to these sets is detection of enrichment of features common to these genes. Popular and important features are those that are assigned by standard ontologies such as GO. Methods such as Fisher’s exact tests are used to determine enrichment of such features in subsets of genes from a genome. We will develop the framework for these through development of an ontology service and an initial set of enrichment tests along with visualizations of results. The ontology service will be key to many future analyses in KBase. This is a natural follow-on to a number of core functions we need to add to the system or that will come-in via the SDK.
 
-The ontology service will be key to many future analyses in KBase. This is a natural follow-on to a number of core functions we need to add to the system or that will come-in via the SDK.
+ User provides a list of genes to be analyzed and select the name of the species and type of the ontology (cellular content, biological process or molecular function). The external gene IDs associated with genes must be supported by KBase (GenBank, EBI, Phytozome  etc). If the genome doesn’t exist, you can alternatively provide the Gene IDs and associated GO accessions. The user can also select the significance level based on one of the three statistical test methods - hypergeometric, chi-square and fisher test. In addition, user can choose one of the methods such as Bonferroni, Hochberg, Hochberg (FDR), Hommel, Holm etc. to do the multi-test adjustment.
 
-Types of Ontology: Standard ontologies such as GO, plant ontology (PO), trait ontology (TO), environment ontology (EO), microbes environment ontology (ENVO) etc. These ontologies can be periodically transferred from their respective parent sources into a dedicated workspace. Transfer should be automatic. 
-
-User selects the genome name and provides a list of genes. The external gene IDs associated with genes must be supported by KBase (GenBank, EBI, Phytozome  etc). If the genome doesn’t exist, you can alternatively provide the Gene IDs and associated GO accessions. The user can also select the significance level as well as the type of multi-test adjustment that can be applied such as Bonferroni, etc.
-
-The result will be list of GO terms with enrichment scores as adjusted p-values. It could also be visualized as color-coded GO hierarchy in the output widget.
-
-
+The result will be table that displays a list of GO terms with enrichment scores, the sample frequency, the background frequency and the adjusted p-values. Sample frequency will be the number of genes those were annotated with GO term whereas the background frequency will be the number of genes annotated to a GO term in  the GO-full or GO-slim set. The results could also be visualized as bar chart or color-coded GO hierarchy in the output widget. For GO visualization details, please see image on ths link: http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0079011#pone-0079011-g016
+The graphical image contains statistically significant GO terms. 
 
 ### Use Cases:
-1. User queries for gene model(s) in a species and all ontology terms associated with the gene model(s) are returned. This could be used for Gene ontology enrichment analysis.
-2. Ontologies should be searchable. User could search with text like “Lignin content” and the ontology service should be able to tell if there is a trait ontology term associated with this trait.
-3. User wants to search for all GWAS studies that have phenotype “lignin content” as part of their assay. 
-4. User wants to search for all RNA-seq experiments based on tissue, developmental stages or treatment. eg. chemical treatment, abiotic stress treatment or biotic stress.
-5. User wants to construct a co-expression network based on tissue or treatment. eg. abiotic stress related co-expression network and hub genes.
+1. User queries for gene model(s) in a species and all ontology terms associated with the gene model(s) are returned. This could be used for Gene ontology enrichment analysis to find which GO terms are overrepresented or underrepresented using annotations for that gene list.
 
+2. GO enrichment studies can be applied to the candidate genes obtained from GWAS studies and Expression profiling studies to see the enrichment of the biological functions associated with those candidate genes. Users can also search the candidate genes based on the terms associated with “Cellular content”, “Biological Process” and “Molecular Functions”. 
 
 ### Dependencies
-1. New Genome TO and loaded Genome in KBase
-2. KBase synchronous service for Ontology graph loaded in KBase (Without it, it still can be done)
-3. KBase ontology search
+1. Genome with features with GO term association as aliases
+2. Background reference annotation (GO full or GO slim for each species)
 
 
 ### Timeline
-3-4 sprints (2-3 sprints if we implement enrichment part only or 3-4 sprint if we have to implement search service)
+2-3 sprints
 
