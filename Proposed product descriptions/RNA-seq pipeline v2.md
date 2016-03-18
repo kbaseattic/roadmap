@@ -6,14 +6,14 @@ Update the RNA-seq pipeline in KBase to make it more modular and scalable (requi
 ### Story/Description
 #### List of updates to the existing pipeline (2-3 sprints)
 1. Enable/modularize the Tuxedo pipeline based on standalone methods.
-..a. Create new method that runs TopHat immediately on a single sample
-..b. Create a method to run CuffMerge and CuffDiff in a single step
-..c. Note there are logical dependencies that make it impossible to run certain components out of sequence. It is not possible to run Cufflinks or later tools without first aligning the reads using Bowtie/Tophat/ or others. Also note that cufflinks is already generic in the sense that either Bowtie or TopHat can be used for aligning the reads.
-..d. Create new method to run Cufflinks on multiple pre-aligned reads (will have to confirm the same reference genome and annotation file was used). **This has Q2/3 scaling dependencies on the SDK currently.**
-..e. Create a method to run entire Tuxedo pipeline end-to-end after setting the parameters. **This has Q2/3 scaling dependencies on the SDK currently.**
+..1. Create new method that runs TopHat immediately on a single sample
+..2. Create a method to run CuffMerge and CuffDiff in a single step
+..3. Note there are logical dependencies that make it impossible to run certain components out of sequence. It is not possible to run Cufflinks or later tools without first aligning the reads using Bowtie/Tophat/ or others. Also note that cufflinks is already generic in the sense that either Bowtie or TopHat can be used for aligning the reads.
+..4. Create new method to run Cufflinks on multiple pre-aligned reads (will have to confirm the same reference genome and annotation file was used). **This has Q2/3 scaling dependencies on the SDK currently.**
+..5. Create a method to run entire Tuxedo pipeline end-to-end after setting the parameters. **This has Q2/3 scaling dependencies on the SDK currently.**
 2. Update the Tuxedo pipeline to use new version of Genome.
 3. Provide UI elements to control advanced parameters
-..a. Review these advanced options to make sure all the important ones are exposed and system parameters are autoset
+..1. Review these advanced options to make sure all the important ones are exposed and system parameters are autoset
 3. Precompute Bowtie indexes for all reference genomes in data store
 4. Add quality check tools for RNA-seq reads such as FastQC and enable existing ones such as Trimmomatic.
 4. Build downloaders for RNA-seq datatypes.
