@@ -19,11 +19,15 @@ Update the RNA-seq pipeline in KBase to make it more modular and scalable (requi
 4. Build downloaders for RNA-seq datatypes.
 5. Additional visualization support for output alignments, etc. **Bam alignments could be visualized by JBrowse however that is Q3/4 dependency.** 
 
-#### Review and prototype additional tools that reduce compute and improve usability.
-1. STAR / Rockhopper
-2. EdgePro / StringTie
-3. DESeq
-4. Kallisto-Sleuth
+#### Review and prototype additional tools that reduce compute and improve usability (1-2 sprints per tool)
+1. Every tool also requires added efforts for supporting upload, download, visualization, documentation. 
+2. Here is the initial list that is subject to change after the final review, as more information comes to forth regarding their performance and accuracy, particularly Kallisto. 
+  1. STAR
+  2. HISAT2
+  3. EdgePro
+  4. StringTie
+  5. DESeq
+  6. Kallisto-Sleuth
 
 
 ### Platform dependency:
