@@ -15,6 +15,8 @@ Products:
 7.  Improved category-based view of Apps (think Netflix style side-side scrolling of Apps in a category, with expanded views per category)
 8.  Better handling of navigation history in the App Catalog (going back in the browser resets app organization settings)
 9.  Improved display of stats per App, Module, and User organized into a timeline.  We already aggregate statistics over 1-week intervals, we could show timeline of usage counts, marking release dates and new registrations.
+10.  Add multiple levels of admin privileges so that different individuals can review releases, view statistics, and perform system operations (such as setting client groups).  Admin privileges such be dynamic without requiring a catalog redeploy.
+11.  Versions of Apps should be pulled directly from module versions, not set independently.
 
 ### User Stories
 Not done, but some are clearly implied from the Store/Description section.
