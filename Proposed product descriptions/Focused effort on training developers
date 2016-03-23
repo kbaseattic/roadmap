@@ -1,0 +1,42 @@
+## Focused effort on training developers
+
+### Summary 
+
+Create complete SDK training materials, and produce at least 3 developer training events (one per month) for Q2. 
+
+### Story/Description
+
+Now that the first release of the SDK is in production, to realize its full impact and maximize the growth of new scientific apps, we want to rapidly grow the number of external developers by providing accessible, effective high quality training material and regular training events that ultimately include training external Trainers to further scale the expansion of training opportunities and thereby indirectly grow new functionality in KBase. This is a DOE Deliverable and would have the greatest impact on growing new functionality in KBase.
+
+Starting with the existing v1 material, we will improve and develop a complete set of SDK developer training materials to include:
+- online documentation
+- online support for self training
+- step by step guides
+- handouts
+- feedback forms
+- training outline to guide trainers
+- training objectives, principles and process
+
+Then a series of training events will be organized and scheduled, first to gauge the completeness and effectiveness of the materials, outline and process. After that regular training events will be held in-person and online. For Q2 we will produce at least 3 developer training events (one per month) that will be held primarily locally with developer groups at the National Labs or closely associated collaborating institutions. Also in the near to mid term a few events may be held at conferences. We will also conduct an initially limited number of events online to determine if this will be feasible, though long term we expect that developer training could be part of an ongoing monthly webinar series.
+
+Organizing, scheduling and assigning trainers (internal or external) will become an ongoing UE activity promoted and held based on methods like those seen with Software and Data Carpentry.
+
+### User stories
+
+Bioinformaticians and developers interested in wrapping their own tools, or existing tools for users will need supportive materials and training events to quickly ramp their skills and get them started toward productive implementation of Apps in KBase. This effort is to provide the range of materials they need, and effective regular events to help them, and gauge and improve the materials both printed and online, and in-person or self-help so the community can not only produce a growing amount of functionality in KBase, but also eventually independently grow and improve the training materials and events.
+
+### Narrative Mockup
+N/A
+
+### Test plan
+
+Some iterative internal or close independent training sessions will be conducted to get user reaction and assess the utility and effectiveness of the training and materials. Criteria for a successful training will be established and assessed for each event.
+
+Subsequent testing will also be conducted just for the self-help online version.
+
+### Timeline
+
+For Q2, we are estimating 3 sprints where the initial focus will be primarily on establishing the course outline, materials and assessment criteria, and then iteratively organizing and scheduling at least 3 events at NLs with possibly one online where we will initially train a small group to assess the effectiveness of doing SDK training online.
+### Citations
+
+N/A
