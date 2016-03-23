@@ -26,7 +26,8 @@ The proposed work is:
 
 ### Timeline
 
-All proposed work is expected to be completed and tested within one sprint.
+This product depends upon the completion of the Dynamic Services and the Execution Engine update campaigns.
+
 
 ### Test plan
 
