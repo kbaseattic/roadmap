@@ -35,8 +35,8 @@ supporting dynamic services.
 
 ### Timeline
 
-1 sprint for implementation
-1 sprint for testing
+1. sprint for implementation
+2. sprint for testing
 
 ### Citations
 
