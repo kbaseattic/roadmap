@@ -117,6 +117,13 @@ below.
 
 ![Image of Genome Rearrangement](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/Genome-rearrangements.png)
 
+## Test Plan
+
+We will test the sequence comparison methods internally with sets of
+genomes of varying distances. We will also attempt to get feedback
+through user testing from biologists and bioinformaticians on their
+own datasets.
+
 ##Citations to code sources
 + DNAdiff
 + Mummer

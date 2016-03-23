@@ -1,6 +1,6 @@
-#Wrapping Assemblers with SDK Product Description
+## Wrapping Assemblers with SDK Product Description
 
-##Summary
+### Summary
 
 This effort will wrap 10 third-party assemblers as individual
 narrative methods using the SDK tools. These methods will allow users
@@ -15,7 +15,7 @@ proposed in the comparative genomic campaign.
 
 + Team: Chris Bun, Moe Alkhafaji
 
-##Extended description
+### Description
 
 While many tools have been developed by the genomics community to
 produce useful assembly, there is a high degree of variability among
@@ -53,7 +53,13 @@ correction with SGA; (3) Contig assembly with IDBA-UD; (4) Crude scaffolding wit
 
 The wrapping of these assemblers will leverage the plugin framework in the ARAST assembly service. This means the execution will happen on a dedicated assembly server which sidesteps the current limitations with computational resources of the SDK containers. Only the list of parameters curated by ARAST will be exposed for each assembler. 
 
-##Timeline for feature release
+### User stories
+
++ User Jared uses MiniASM to assemble his E. coli strain sequenced with PacBio in 10 minutes and gets a draft genome with only one contig.
+
++ User Maria tries multiple assemblers (SPAdes, A6, MaSuRCA, IDBA-UD) on the same dataset and compares the reference genome with the 4 versions of assemblies using the dnadiff app to get a sense of which assembly is the closest to the reference.
+
+### Timeline 
 + January 5: deploy a prototype of the SPAdes assembler
 + January 15: deploy prototypes of microbial isolate assemblers: A5, A6, IDBA_UD, Velvet, MaSuRCA
 + January 25: deploy prototypes of assemblers capable of handling small metagenomes: Ray, Kiki, MEGAHIT
@@ -61,12 +67,14 @@ The wrapping of these assemblers will leverage the plugin framework in the ARAST
 + February 15: explose the logs of assembly execution
 + February 25: promote the wrapped assemblers to beta 
 
-##User stories
+### Test Plan
 
-+ User Patrick uses MiniASM to assemble his E. coli strain sequenced with PacBio in 10 minutes and gets a draft genome with only one contig.
+We will test each wrapper assembler internally with simulated and real
+datasets. We will also attempt to get feedback through user testing
+from biologists and bioinformaticians on the quality of assembly on
+their own datasets.
 
-+ User Maria tries multiple assemblers (SPAdes, A6, MaSuRCA, IDBA-UD) on the same dataset and compares the reference genome with the 4 versions of assemblies using the dnadiff app to get a sense of which assembly is the closest to the reference.
-
-##Future work
+### Future work
 
 The execution model of these third-party assemblers will be flattened in the next release. This means the assemblers will run on the containers instead of a centralized assembly server. This will require SDK to support large-memory nodes (256 GB+). It can potentially simplify the queuing system and resource allocation. 
+
