@@ -18,7 +18,38 @@ previously-fixed bugs.  This is a long-overdue, most basic of improvements to
 the software engineering standards of the project, so while "now" is already
 *late*, late is better than never.
 
+The implementation team should identify a few (no more than three) KBase
+repositories where the following should be implemented.  This sprint should be
+able to complete the tasks for at least *one* of them in full, but the other
+two should be available as stretch goals.
 
+In this case, the "product" consists of completing the following:
+
+* Instrument the repository with a testing code coverage tool that includes
+  online per-build reports, such as [codecov](https://codecov.io) or
+  [coveralls](https://coveralls.io) (the team should identify the appropriate
+  tool to use).
+
+* Add substantial unit tests to the repository and track the resulting code
+  coverage. A substantial improvement in test coverage should be achieved by
+  the end of the sprint (whether the repo had some tests in the first place or
+  not).
+
+* Identify, if necessary, what mocking library to use for unit tests to
+  complete.
+
+* Activate Github's TravisCI for the repo, so that new pull requests are
+auto-tested before review.
+
+* Add integration testing that executes inside KBase's Jenkins infrastructure.
+
+* Identify at least one bug in that repo that needs fixing, add tests for
+the bug and fix it, to demonstrate basic regression testing.
+
+* Write up a summary document explaining how the above was completed and submit
+  it to the [project guides](https://github.com/kbase/project_guides)
+  repository, so that it can serve as a continually improved set of guidelines
+  for the project.
 
 ## User stories
 
@@ -30,10 +61,6 @@ the software engineering standards of the project, so while "now" is already
   able to see their pull requests immediately tested even before the code is
   reviewed.  The review process than thus proceed with higher confidence that
   the code in question doesn't break any existing functionality.
-
-- Unit tests implemented.
-- Code coverage added
-- 
 
 ## Narrative Mockup
 
