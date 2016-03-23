@@ -1,31 +1,56 @@
-# KBase Development Process
+# KBase Development Process: Testing improvements
 
 ## Summary
-A brief summary of what the product will enable or improve for the user.
+
+An initial implementation of basic end-to-end testing for at least one
+repository in the project, to start establishing best practices on this front.
 
 ## Story/Description
-A longer story about the what the functionality is designed to do; what its
-significance and impact would be; and an argument for why now?
+
+KBase is in serious need of improved testing practices across the project.
+This single-sprint effort aims to start paying some fo that technical debt by
+showing how to implement automated testing at multiple levels for at least one
+repository in the project.
+
+Improved testing practices, once adopted project-wide, will have a significant
+impact in improving code quality and reducing the re-appearance of
+previously-fixed bugs.  This is a long-overdue, most basic of improvements to
+the software engineering standards of the project, so while "now" is already
+*late*, late is better than never.
 
 
 
 ## User stories
-A small set of user stories that discuss how this functionality would improve
-the system for the users.
 
+* Users will be able to go to any of the project's repositories and find the
+  testing coverage for that repo, the results of the latest build, and tests
+  associated with any previously reported and fixed bugs.
+
+* When making new contributions to the project, users and developers will be
+  able to see their pull requests immediately tested even before the code is
+  reviewed.  The review process than thus proceed with higher confidence that
+  the code in question doesn't break any existing functionality.
+
+- Unit tests implemented.
+- Code coverage added
+- 
 
 ## Narrative Mockup
-A mocked-up Narrative (written in Markdown) that:
-  1. Shows a plausible, scientifically coherent, story of how the new functionality would appear to the user--essentially, an annotated example of how a user would experience the new behaviors. This could be new scientific functionality, or simple better experience.
-  2. Clear incremental, demonstrable deliverables on the road to the full functionality. (If possible, deliverables should be scoped to be demonstrable after each two-week sprint.)
-  3. If the new functionality requires management or analysis of data, then exemplar data sets and their logic for inclusion and testing must be made available and uploaded if possible into the mock-narrative.
-  4. If the new functionality is improved experience, then the Narrative should be "annotated" to describe how the platform improvement would improve that experience. Many times the improvement might not directly impact the Narrative experience and that is ok as long as the improvement is described in the Narrative.
+
+N/A
 
 ## Timeline
-  A timeline should include partial, stepwise goals with a rough timeline. For example, what partial functionality or improvements would be available at the end of each sprint.
+
+While this is an area where the project should, over time, do a lot more work,
+for now this is being deliberately scoped to a single sprint.  In the face of
+many other competing priorities, at least spending *one* sprint building better
+testing will help the project start adopting these practices as part of the
+regular development process.
 
 ## Test plan
-Should include both internal testing and external user testing/user engagement.
+
+By definition, this PD is specifically about testing, so this is covered above.
 
 ## Citations
-Citation to core external code to be incorporated and proof of open-source
+
+N/A
