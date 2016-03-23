@@ -81,14 +81,14 @@ and involve more tools. We propose to initially support the following tools:
 
 ### Narrative Mockup
 
-#### Variation location and type
-![Image of variation location](http://bioseed.mcs.anl.gov/~fangfang/temp/var-type.png)
+Variation location and type
+![Image of variation location](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/var-types.png)
 
-#### Variation region and functions of neighboring proteins
-![Image of variation function](http://bioseed.mcs.anl.gov/~fangfang/temp/var-function.png)
+Variation region and functions of neighboring proteins
+![Image of variation function](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/var-functions.png)
 
-#### Table summarizing shared and unique variations across samples
-![Image of variation samples](http://bioseed.mcs.anl.gov/~fangfang/temp/var-sample.png)
+Table summarizing shared and unique variations across samples
+![Image of variation samples](https://raw.githubusercontent.com/kbase/comparative_genomics/master/docs/images/var-samples.png)
 
 
 ### Timeline
