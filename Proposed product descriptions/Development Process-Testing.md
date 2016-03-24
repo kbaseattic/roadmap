@@ -5,6 +5,10 @@
 An initial implementation of basic end-to-end testing for at least one
 repository in the project, to start establishing best practices on this front.
 
+**Note:** the first pass on this idea will be done by the soon-to-be-hired
+  Product Engineering Lead, who in the long run will be responsible for this
+  kind of activity taking hold project-wide.
+
 ## Story/Description
 
 KBase is in serious need of improved testing practices across the project.
