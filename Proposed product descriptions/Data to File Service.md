@@ -19,13 +19,19 @@ Currently, a developer needs to know too much detail about the KBase data object
 
 This process takes ~200 lines of code to implement in current SDK methods. And any bug fix or additional error checking would have to be independently done in each method. 
 
-To simplify this, the developer needs access to a lightweight, easy to understand process for generating files. This method needs to be centrally managed, hide details of KBase typing system and architecture, and perform all error handling and manage warnings. For saving KBase typed objects, an easy process for generating metadata from a parent object will also be needed. 
+To simplify this, the developer needs: 
 
-Because the SDK methods will be running on already provisioned compute, it is desirable to use the local compute resources as much as possible. 
+* A lightweight, easy to understand process for generating files from KBase Objects. 
+* This method needs to be centrally managed. 
+* Hide details of KBase typing system and architecture. 
+* Perform all error handling and manage warnings. 
+* For saving KBase typed objects, an easy process for generating metadata from a parent object will also be needed.
+* The file generation should run on the already provisioned compute node.
+* Updates to the file generation code (service/method/script/etc) should not require the SDK module to be rebuilt.
+* The process for adding a new convert should be easy and available to 3rd party devs.
+* Developers should be able to easily browse all available object to file converters (like the AppCatalog)
+* Adding a new converter should not require a redeploy of the KBase platform.
 
-It should be easy to add a new converter, without requiring a redeploy of the KBase platform.
-
-Developers should be able to easily browse all the available object to file converters.
 
 ### User Stories
 As a developer, I would like to be able to easily generate a file from a KBase typed object to use as input to a command line program.
