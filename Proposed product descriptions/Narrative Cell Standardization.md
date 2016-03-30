@@ -44,7 +44,31 @@ A less-computationally-savvy user should not see a difference in their user expe
 
 ### Timeline
 
-At least 3 sprints
+Three sprints
+  1. Goal: render visualization widgets in the Narrative via some Narrative API call.
+  This is mostly already doable, but this sprint will expand on the capability in two ways.
+    A. Allow for widget packages built as a kbase-ui plugin to render in the Narrative.
+       * Implies a way to list available widgets, import particular widgets, ensure they're loaded, etc.
+       * Will require a way to build and test locally.
+    B. Start migrating existing widgets in the narrative repo into a kbase-ui plugin for loading in both the NI and landing pages.
+    C. Widgets generated this way should look identical to current widgets, but should be able to toggle their Code Cell input area.
+
+  A successful sprint here would result in a simple API (at least a prototype) that allows for running widgets that save and restore state in such a way that they're indistinguishable from other Jupyter cell commands (e.g. runs done with Plot.ly or matplotlib)
+
+  2. Goal: prototype an API that executes jobs programmatically.
+    A. Job running should behave as it does now - creates and manages a job in the Jobs Panel, also creates a Job Object that can be queried for status, logs, and result widgets.
+    B. Newly clicked method cells should be invoked by similar code cells. Clicking the Run button should execute code via the API.
+    C. Test the API with internal users.
+
+  A successful sprint here would produce a prototype, possibly incomplete API that would likely consist of accessory functions for fetching KBase App information and Job management.
+
+  3. Goal: finalize the standardization
+    A. Clean up the prototype API based on testing and interaction with internal users.
+    B. Finalize cell rendering functionality to be entirely based on code cells.
+    C. Build a Narrative updater that will migrate existing Narratives using Markdown cells to the new format.
+
+  A successful final sprint will have an initial release of the programmatic API, as well as using it internally for all new point-and-click based method calls.
+
   1. Render method / app cells as code cells. This will necessitate writing a fairly simple interface (or, at least, simpler) for executing jobs.
   2. Render data viewers and method output widgets in code cells, modify a few existing viewers to make use of the kernel for data fetching/rendering.
   3. Standardize all method, app, and viewers to behave as expected for code cells. A final stretch for this sprint would be to try to statically render all output as HTML using Jupyter's nbconvert package.
