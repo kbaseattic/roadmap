@@ -17,11 +17,16 @@ In this campaign, we will update the RNA-seq service to include support for the 
 7. Additional visualization support for output alignments, including [iobio](http://bam.iobio.io/). 
 
 
-### Platform dependency:
-1. Bulk Uploaders
+### Risks and dependencies
+1. It is *essential* that we have a clear path to uploaders. However, it's not presently very apparent what that path is.
+  1. Import from http/ftp URL in Narrative Interface
+  2. Support multiple job uploads in Importer to allow parallel uploads in a single narrative session.
+  3. SRA Format (eg NCBI genomes): SRA->FASTQ support in uploader. 
+2. Bulk Uploaders are on the plate for Q2
   1. Make sure to capture metadata about the samples at upload
-2. Ability to scale a compute-intensive job using multiple AWE workers or HPC
-3. JBrowse browser for viewing BAM alignments
+3. Ability to scale a compute-intensive job using multiple AWE workers or HPC is currently absent in KBase and it would be desirable to have that be supported in very near future, since it will allow us to batch process functionality such as TopHat, Cufflinks or run entire Tuxedo pipeline end-to-end after setting the parameters in a single app.
+4. A genome browser, such as JBrowse, is desirable for viewing BAM alignments
+
 
 ### Test plan
 1. Test scalability for 50-100 samples for bulk upload
