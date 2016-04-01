@@ -21,7 +21,7 @@ In this campaign, we will update the RNA-seq service to include support for the 
 2. Conduct external beta tests
 
 ### Risks and dependencies
-1. It is *essential* that we have a clear path to uploaders. However, it's not presently very apparent what that path is.
+1. It is **essential** that we have a clear path to uploaders. However, it's presently not very apparent what that path is. Here are a few high priority uploader feature requests.
   1. Import from http/ftp URL in Narrative Interface
   2. Support multiple job uploads in Importer to allow parallel uploads in a single narrative session.
   3. SRA Format (eg NCBI genomes): SRA->FASTQ support in uploader. 
