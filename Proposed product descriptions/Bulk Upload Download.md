@@ -5,7 +5,7 @@
 This will enable upload and download operations on more than one object at a time.
 
 ### Story/Description
-We have recieved many requests for bulk object upload/download operations.  This should be done now as bulk file operations are widely available to users of other web services.  
+We have recieved many requests for bulk object upload/download operations.  This should be done now as bulk file operations are widely available to users of other web services. User can also import reads from a ftp or http site that he/she specify. 
 
 ### User stories
 
