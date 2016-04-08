@@ -49,6 +49,15 @@ Some ideas that came up in our brain storming with the euks team for future work
 
 2. A user loads RNA-seq data from a variety of plant tissues using the bulk-upload service. The meta-data tool in the bulk upload service accesses the tissue ontology (TO) in the ontology service and enables users to specify the tissue for each RNA-seq sample from the available TO terms (we like this user story because it connects bulk upload and ontology).
 
+3. A user wants to query the gene models in a species and all ontology terms associated with gene models are returned. User can filter the ontology terms based on the ontology domain (cellular content, biological process, molecular functions) and evidence codes (EXP; IDA; IEP; IMP; IEA etc.)
+
+4. A user wants to search the controlled vocabulary terms. These can be searched by giving keyword, ontology id etc. e.g if a user wants to search “root”, then he should be able to get PO term for “root” tissue using KBase search and can use this term for curation of expression sample metadata. 
+
+5. A user wants to see the enrichment of the biological process or molecular functions associated with the differential expressed genes obtained from RNA-seq pipeline. This PD will help in creating foundation for performing GO and pathway enrichment studies later and various ontology tools can be added as a part of SDK by third party developers. 
+
+6. Mapping of SEED terms with GO will help in identification of key molecular pathways and robust gene ontology signatures when these will be used with methods related to gene expression profiles and metabolic models. 
+
+
 ### Dependencies
 We hope to reuse the automated update and maintenance capabilities developed by the reference data campaign at ANL.
 
