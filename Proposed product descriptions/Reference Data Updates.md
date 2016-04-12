@@ -31,13 +31,16 @@ This produce involves making all genomes in RefSeq, Ensembl, and Phytozome avail
 
 - Retrieve microbial genomes from RefSeq and plant genomes from Ensembl
 - Design scripts to load genomes (as GenBank files) into workspace and index them into solr
-- Load a small batch of test genomes (~100-200) and make any changes needed in the existing upload scripts and/or Solr schema to capture data source and provenance.
-- Evaluate performance for loading large batches. 
+- Load a small batch of test genomes (~100-200), review the genomes loaded into workspace and solr, identify and make any changes needed in the existing upload scripts and/or Solr schema to capture data source and provenance.
+- Evaluate performance for loading large batches.
+- Test sample genomes loaded for accuracy and completeness.
 
 **Sprint 2:**
 - Start loading microbial genomes from RefSeq and plant genomes from Ensembl.  
-- Develop scripts for loading plant genomes from Phytozome, which will require first creating GenBank files from FASTA and GFF files
-- Design automatic genome update pipelines v1: minimally for RefSeq, and if time, Enseml and Phytozome as well
+- Develop scripts for loading plant genomes from Phytozome, which will require first creating GenBank files from FASTA and GFF files.
+- Load plant genomes from Phytozom for testing.
+- Design automatic genome update pipelines v1: minimally for RefSeq, and if time, Enseml and Phytozome as well.
+- Test all the reference genomes laoded for accuracy and completeness. 
 
 **Sprint 3 (not a full sprint - mostly UI person):**
 
@@ -45,6 +48,8 @@ This produce involves making all genomes in RefSeq, Ensembl, and Phytozome avail
 - Finish loading any remaining genomes
 - Enable use of KBase search and narrative data panel to query and select RefSeq, Enseml, and Phytozome genomes
 - Refine search UI based on feedback
+- Write documentation/tutorials for reference data
+- Final testing of the data and search UI
 
 ### User stories
 
