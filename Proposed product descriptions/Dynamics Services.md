@@ -31,21 +31,27 @@ This would allow developers to stand up continuously running service that would 
 
 1.	On submission of new service repositories, build docker container.
 2.	If container builds, run tests.
-3.	If tests pass, add container to docker image repository.
+3.	If tests pass, add container to docker image repository and configurations that would allow the service to start dynamically.
 4.	Send alert to Sys Admin for review.
 5.	If service passes review and is marked for deployment, status is updated and service is available through service catalog and visible in service browser UI.
 6.	Service is published in service list.
 
 #### KBase Platform Concept of Operations [service call]
 
-1.	A properly structured request for a published service arrives.
-2.	If service is already running
-    1. forward request to service
-    2. record usage statistics
-3.	If service is not running
-    1. service is started & added to router
-    2. request sent to service
-    3. record usage statistics
+1.	Client requests a URL for a specific service module and semantic version from the Catalog Service or a related new service
+2.	Lookup from the Catalog the specific module version and container requested
+3.	If service is already running
+	1. Return URL to client with service status
+	2. Client connects to service
+	3. Usage stats are recorded
+4.	If service is not running
+	1. Start service and start monitoring status
+	2. Return status indicator to client indicating service is starting up
+	3. Client waits and checks service status
+	4. Once service is up and running, return URL to client
+	5. Client connects to service
+	6. Usage stats are recorded
+
 
 #### KBase Platform Concept of Operations [service balancing]
 
