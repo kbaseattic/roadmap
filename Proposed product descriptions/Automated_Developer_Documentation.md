@@ -37,7 +37,7 @@ Perl|None
 Java|Improve the nearly illegible tuple documentation. One approach is listing the tuple members in the main method text and simply providing a reference to that text (e.g. @param sometuple see definition above) in the parameter and return listings.
 Python|Provide parity with Perl documentation via Sphinx autodoc compatible documentation (the standard for Python documentation).
 Javascript|Provide parity with Perl documentation using Javascript standard documentation methods.
-R|Provide parity with R documentation using R standard documentation methods.
+R|Provide parity with Perl documentation using R standard documentation methods.
 
 ###Provide navigable language agnostic documentation:
 
