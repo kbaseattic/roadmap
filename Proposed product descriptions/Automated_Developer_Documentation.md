@@ -46,6 +46,7 @@ Add an option to the SDK to produce standalone HTML versions of the typespec(s),
 * Provides an index of the typedefs and funcdefs (similar to the Perldoc)
 * Links typenames to their typedef
 * Displays each element of the typespec (e.g. keywords, variable names, type names, etc) as per an associated css file. A default css file should be generated with reasonable settings (probably matching the type browser).
+* Provides anchors for, at minimum, typedefs and funcdefs so that urls can be created that link to these Xdefs. The other possible extreme is allowing links for every line of the file like GitHub.
 
 ##User stories:
 No changes would be evident to a bench biologist.
