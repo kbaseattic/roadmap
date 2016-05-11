@@ -1,4 +1,4 @@
-## Data to File Services
+## SDK User Metrics & Analytics
 
 ### Summary
 KBase needs to have the ability to determine usage of the methods implemented via the SDK.  In the long term, this may include capturing parameters and characteristics of data sets to allow for determination of the quality of results against benchmarks and being able to compare different algorithms and parameterizations to learn which approaches work best.  In this short term, we aim to capture which methods are greatest serving our customer (both in terms of number of runs and unique users), which methods are growing or waning in popularity, whether methods need improvement or are otherwise alienating the customer from their use, and which methods are being used in concert, allowing us to perhaps tailor them to better integrate them as well as train a next-method recommendation feature for the Narrative.  Execution data is captured by the Catalog service, and can now be queried within code cells to produce graphs within Narrative sessions.
