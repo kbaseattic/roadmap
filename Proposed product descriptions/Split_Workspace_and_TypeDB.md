@@ -56,6 +56,11 @@ APIs that are smaller, more cohesive, and easier to understand.
 Similarly, splitting the services into separate codebases would result in
 codebases that are smaller, more cohesive, and easier to understand.
 
+**Note** that the longer this waits, the more likely it is that a feature is
+added to the WOS or TD that increases their coupling. Given that and the
+magnitude of the change to the overall architecture it is advisable to
+perform the split sooner rather than later.
+
 ##Approach:
 
 Split the WSS codebase into 3 repos containing
