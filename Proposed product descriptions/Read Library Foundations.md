@@ -31,7 +31,7 @@ As a user, I want to share my uploaded reads with other members of my laboratory
 
 ### Narrative Mockup
 
-
+Pending...
 
 ### Timeline of tasks
   1. Refactor reads objects as necessary for clarity of use, in conjunction with the data API team.
@@ -41,7 +41,9 @@ As a user, I want to share my uploaded reads with other members of my laboratory
 
 
 ### Test plan
+User testing should be performed to inform each step, especially with regard to the major UI changes (management system changes, and QC reporting).
 
+Internal testing should be performed against a wide range of actual reads data files that we can gather from internal users.
 
 ### Citations
 This will be populated when open-source tools for reads QC are chosen.
