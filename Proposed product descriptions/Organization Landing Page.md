@@ -1,30 +1,39 @@
-## High Level Product Description Template:
-
-In addition to the below, proposed KBase apps should also follow the requirements in the [KBase product requirements document](./KBase%20product%20requirements.md)
-
-These high level descriptions must include the following:
+## Organization Landing Page
 
 ### Summary
-A brief summary of what the product will enable or improve for the user.
+This product is the creation of a landing page for organizations - these are groups of users that share credit for group contributions to KBase.
 
 ### Story/Description
-A longer story about the what the functionality is designed to do; what its significance and impact would be; and an argument for why now?
+In order to attract third party contributions, both data and tools, we need prominent branding of organizations so that data and tool contributions can be properly credited to an institution.  This is part of the larger problem of enabling groups in KBase, but much more specific, and may not necessarily imply sharing privileges.
+
+A User should be able to create an Organization, serve as an Organization admin, and allow users to be associated to the organization.  A landing page for each group should be available that allows a logo, description, links to be attached.  Tools and public workspaces can then be attached to the organization.  The organization page should display these contributions with usage statistics and organization team members.  Tools and workspaces in KBase should also be branded and linked to the organization page appropriately.
 
 ### User stories
-A small set of user stories that discuss how this functionality would improve the system for the users.
+As a user, I want to be able to create an organization and own it.
+
+As a user, I want to request to join (or leave) an organization.
+
+As an org admin, I want to invite and admit users into my organization.
+
+As an org admin, I want to remove users from my organization.
+
+As an org admin, I want to add branding to my organization's page. This would include images, links, and text about my organization.
+
+As a user, I want to see organization information on that landing page, including the branding information, which apps are owned by that organization, and which public Narratives (and data) are owned by that organization.
+
 
 ### Narrative Mockup
-A mocked-up Narrative (written in Markdown) that:
-  1. Shows a plausible, scientifically coherent, story of how the new functionality would appear to the user--essentially, an annotated example of how a user would experience the new behaviors. This could be new scientific functionality, or simple better experience.
-  2. Clear incremental, demonstrable deliverables on the road to the full functionality. (If possible, deliverables should be scoped to be demonstrable after each two-week sprint.)
-  3. If the new functionality requires management or analysis of data, then exemplar data sets and their logic for inclusion and testing must be made available and uploaded if possible into the mock-narrative.
-  4. If the new functionality is improved experience, then the Narrative should be "annotated" to describe how the platform improvement would improve that experience. Many times the improvement might not directly impact the Narrative experience and that is ok as long as the improvement is described in the Narrative.
+
+N/A - a page mockup is in progress.
 
 ### Timeline
-  A timeline should include partial, stepwise goals with a rough timeline. For example, what partial functionality or improvements would be available at the end of each sprint.
+
+Approximately 1 sprint.
 
 ### Test plan
-Should include both internal testing and external user testing/user engagement.
+
+Testing will be done with paper mockups at least locally before implementation.
 
 ### Citations
-Citation to core external code to be incorporated and proof of open-source
+
+N/A
