@@ -50,8 +50,8 @@ does not belong to the WSS.
 
 **Note** that the longer this waits, the more likely it is that a feature is
 added to the WOS that makes GC more difficult or impossible. Given that and the
-magnitude of the change to the overall architecture it is advisable to perform
-the split sooner rather than later.
+magnitude of the change to the overall architecture it is advisable to add GC
+sooner rather than later.
 
 ##User stories:
 Since deleted data is not currently visible to bench biologists, they will
