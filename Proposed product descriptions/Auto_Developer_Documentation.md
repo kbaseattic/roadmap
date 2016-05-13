@@ -55,10 +55,10 @@ and read.
 3. Add the ability to comment inside structures. Comments should be associated
    with the following structure field and support the @metadata, @optional,
    @range, @enum (if enumerations are implemented as annotations), @notnull,
-   and @id annotations. Currently structures may only be described in a single
-   block of text at the top of the structure definition, so understanding a
-   structure with many fields entails returning to the text block many times
-   (if it even documents the structure members)
+   @deprecated, and @id annotations. Currently structures may only be described
+   in a single block of text at the top of the structure definition, so
+   understanding a structure with many fields entails returning to the text
+   block many times (if it even documents the structure members)
    ([example](https://narrative.kbase.us/#spec/type/KBaseFile.PairedEndLibrary)).
    Documentation adjacent to each field is much more readable.
     1. As a side benefit, Java documentation can then provide proper
