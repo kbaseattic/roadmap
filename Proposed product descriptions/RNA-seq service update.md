@@ -3,18 +3,16 @@
 ### Summary
 In this campaign, we will update the RNA-seq service to include support for the new Genome data object via the Data API, new downloaders, additional interactive widgets and plots. As a result, this will also include refactoring of the current functionality and related modifications in apps and documentation.
 
-### Story/Description
-1. Enable/modularize the Tuxedo pipeline based on standalone methods.
-  1. Create new method that runs TopHat immediately on a single sample
-  2. Create a method to run CuffMerge and CuffDiff in a single step
-  3. Note there are logical dependencies that make it impossible to run certain components out of sequence. It is not possible to run Cufflinks or later tools without first aligning the reads using Bowtie/Tophat/others. Also note that cufflinks is already generic in the sense that either Bowtie or TopHat can be used for aligning the reads.
-2. Update the Tuxedo pipeline to use new version of Genome.
-3. Provide UI elements to control mandatory and advanced/optional parameters
-  1. Review mandatory and advanced options to make sure all the important ones are exposed and system parameters are autoset
-4. Extend current functionality to get annotations for new genome objects. Also, precompute and load annotations for reference genomes
-5. Precompute Bowtie indexes for all reference genomes in data store
-6. Add downloaders for RNA-seq datatypes (reads, alignment, cuffdiff output, cummerbund plots).
-7. Additional visualization support for output alignments, including [iobio](http://bam.iobio.io/). 
+### User Stories
+1. User can upload a new genome that does not exist in KBase. He would be able to upload the annotations and assembled sequences in and can use that genome as a reference Genome in the RNA-seq service
+2. User can run RNA-seq pipeline on the reference genomes stored in KBase. The reference genomes can be from Refseq, Ensembl and Phytozome. 
+3. User can run TopHat on the read files that he has uploaded and visualize output alignments in Narrative UI and download the alignments.
+4. User can download the Cufflinks and Cuffdiff output files.
+5. User can select the subset of samples to visualize interactively the Cuffdiff results obtained from the entire set of read samples using CummeRbund package, and can get HeatMap of the selected samples. Then user can  download the plots and HeatMap as high resolution static images.  
+6. User can run interactive method “Volcano Matrix Plot” to get the list of significant differentially expressed genes and can also download the static plots and the associated list of genes.
+7. User can see the functional information and GO annotations on the list of differentially expressed genes in Expression matrix and HeatMap.
+8. User can upload multiple read files in a single upload (bulk uploader dependency).
+9. User can upload read files from ftp/http site using the data importer.
 
 ### Test plan
 1. Integration tests based on new version of Data API as well as uploaders, downloaders, landing pages, widgets.
