@@ -18,16 +18,40 @@ In this campaign, we will update the RNA-seq service to include support for the 
 1. Integration tests based on new version of Data API as well as uploaders, downloaders, landing pages, widgets.
 2. Conduct external beta tests
 
-### Risks and dependencies
-1. It is **essential** that we have a clear path to uploaders. However, it's presently not very apparent what that path is. Here are a few high priority uploader feature requests.
-  1. Import from http/ftp URL in Narrative Interface
-  2. Support multiple job uploads in Importer to allow parallel uploads in a single narrative session.
-  3. SRA Format (eg NCBI genomes): SRA->FASTQ support in uploader. 
-2. Bulk Uploaders are on the plate for Q2
-  1. Make sure to capture metadata about the samples at upload
-3. Ability to scale a compute-intensive job using multiple AWE workers or HPC is currently absent in KBase and it would be desirable to have that be supported in very near future, since it will allow us to batch process functionality such as TopHat, Cufflinks or run entire Tuxedo pipeline end-to-end after setting the parameters in a single app.
-4. A genome browser, such as JBrowse, is desirable for viewing BAM alignments
+### Existing bottlenecks, Dependencies and Resolutions
+#### Uploader for reads to include SRA format (addresses read upload performance in Q2):
+In addition to FASTQ format, we would like to have reads uploader in SRA format. It will help in faster upload and will be convenient for users to directly import the file from ftp site in SRA format in narrative. Just to give an idea - read file SRR676520 in SRA format is 2.4Gb. Currently, we need to convert it in FASTQ format to upload it in narrative. Once we convert it in FASTQ through SRA toolkit, its size becomes 17.8 Gb. Here are the steps a user has to currently do to import reads -
+1. Install NCBI SRA toolkit on the desktop
+2. Download read files (individually for each sample in SRA format) from NCBI SRA site
+3. Convert SRA to FASTQ on the desktop
+4. Upload file from desktop to narrative using “import”
 
+So, it’s very tedious process that takes lot of memory and time in uploading FASTQ file. SRA format is almost 7-8 times smaller in size so it will also fasten the uploading process and user can directly upload file from NCBI FTP site without going through all the steps on his desktop.
 
+As RNA-seq tool requires reads in FASTQ format, therefore, it’s important to convert imported reads from SRA to FASTQ format. This will be supported by the Bulk upload team in this quarter. https://atlassian.kbase.us/browse/KBASE-4106
 
+#### Bulk Uploader and Metadata (address usability w.r.t uploading large number of samples and modularity in pipeline in Q2)
+During discussion with Bulk upload and Data teams, we discussed the RNA-seq dependency on bulk uploader and metadata.
+We will prioritize some of the metadata that needs to filled by user at the time of bulk uploading of the reads. Some of the metadata can be asked later by narrative method. As a result, the ‘Set up RNA-seq Experiment’ method that creates experiment analysis object as first step will no longer be the requirement of the pipeline. Rather, metadata information as part of RNA-seq analysis project report will be input parameters as part of cuffdiff method.
 
+Also, with help from Bulk upload team, we are considering supporting bulk upload for BAM files in RNA-seq service in next quarter.
+
+Metadata list is given here on this link:
+https://docs.google.com/document/d/17Dfp_3Qjrb-TDedGaDnT9EL7cnKXiXCrbxBVN2kvgwc/edit
+
+#### Modularity (addresses usability in Q2)
+We would like to have modular TopHat and Cufflinks methods. In addition, Cuffmerge and Cuffdiff can be merged as one method.
+
+Based on the ongoing discussions with Data team, we have agreed on making some datatype changes for the RNA-seq module.
+
+1. Create a SampleSet object to group RNA-seq sample runs.
+2. Update KBaseRNASeq.RNASeqAnalyis object
+3. Update the KBaseRNASeq.RNASeqAlignment  object to add more fields on the inputs to the alignment step to help tracking them later in the pipeline
+4. Update the Cufflinks output object type to add more fields on the inputs to the step to help tracking them later in the pipeline.
+
+Currently we have derived objects from KBaseGenomes.GenomeAssembly and KBaseGenomes.GenomeAnnotation for Bowtie Index file and GTF file (as Genome Reference Annotation) respectively. These are fundamentally not biological data types and can be stored as binary files associated with a primary datatype, e.g. Bowtie index with Assembly and GTF with Genome Annotation. We have agreed to work with Data team to make the necessary changes in next quarter.
+
+#### Scalability (not addressed in Q2)
+Please note that, this PD is primarily addressing the modularity and usability issues but we will continue to have scalability concerns for large number of samples and large reads and large genomes, common to Euks.
+
+TopHat and Cufflinks can be scaled up by Parallel SDK job execution support and Cuffmerge/Cuffdiff can be scaled up by HPC based execution support in near future when the corresponding PDs are implemented in KBase.
