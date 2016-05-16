@@ -1,0 +1,29 @@
+## Summary
+The present version of RNA-seq service is essentially an implementation of the RNA-seq Tuxedo protocol for prokaryotes and eukaryotes. Currently, it provides an integrated computational workflow for RNA-seq based gene expression analysis for microbes and flagship plant genomes. This service aligns the RNA-seq reads, assigns aligned reads to genes and performs differential gene expression analysis to detect differential transcript abundances between tissues, developmental stages, genetic backgrounds, and environmental conditions. 
+
+We plan to extend this pipeline with a next generation of RNA-seq tools which are emerging as faster and more accurate alternatives, whether it’s the detection and quantification of reads or the assembled transcripts or the differentially expressed genes. 
+
+## Use cases:
+1. As a user, I want to use FastQC to study the read sequence quality and Trimmomatic (already available in KBase) to filter out the low quality regions from the sequences.
+
+2. As a user, I want to use Star/HiSat2 to conduct sample read alignments against a reference genome.
+
+3. As a user, I want to use DESeq/Ballgown to conduct differential gene expression analysis based on the transcripts assembled from the sequenced reads using EdgePro/StringTie.
+
+## Candidates for 2016 Q3:
+1. Reads Import: Reads QC, trimming, error correction, pre-processing, QC visualization and generates report (Add FastQC and enable Trimmomatic existing in KBase)
+
+2. Reads alignment: mapping of individual samples to a reference genome/transcriptome - counting the number of mapped reads, quality control of the aligned reads. It will need parallel processing of reads and better tools for visualization of Bam files (STAR/HISAT2)
+ 
+3. Transcriptome assembly: EdgePro/StringTie to assemble transcripts. Currently Cufflinks is used.
+ 
+4. Fast, flexible differential expression analysis: DESeq/Ballgown can be used to visualize the transcript assembly on a gene by gene basis; abundance estimates for exons, introns, transcripts; perform linear model based diff analyses.
+
+5. Visualization:
+ 1. Visualization for read coverage profiles, summary stats. This is pretty generic to all alignment outputs, although RNA-seq coverage will be sparse. Internally this can use bedtools genomeCoverageBed or samtools mpileup. Note: JBrowse to view bam alignments has also been discussed in other PDs.
+ 2. Data transformation and query services with BEDTools:
+  1. Support for Alignments from bam to bed format and make it downloadable (bedtools bamtobed)
+  2. Support for targeted use cases to query using bedtools with reference annotation (bedtools intersect)
+  3. Coverage across certain genes (bedtools coverage)
+  4. Overlap/proximity of genes with other genomic features (bedtools overlap)
+
