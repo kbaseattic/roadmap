@@ -1,4 +1,4 @@
-## RNA-seq service update
+## RNA-seq service update, 2016 Q2
 
 ### Summary
 In this campaign, we will update the RNA-seq service to include support for the new Genome data object via the Data API, new downloaders, additional interactive widgets and plots. As a result, this will also include refactoring of the current functionality and related modifications in apps and documentation.
