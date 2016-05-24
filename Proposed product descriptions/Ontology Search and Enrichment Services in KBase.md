@@ -17,6 +17,8 @@ The graphical image contains statistically significant GO terms.
 
 2. GO enrichment studies can be applied to the candidate genes obtained from GWAS studies and Expression profiling studies to see the enrichment of the biological functions associated with those candidate genes. Users can also search the candidate genes based on the terms associated with “Cellular content”, “Biological Process” and “Molecular Functions”. 
 
+3. GO enrichment studies can be used to identify biologically meaningful coexpression clusters (functional modules) and thus helps users to identify biological pathways associated with the related biological process of the genes of interest. 
+
 ### Dependencies
 1. Genome with features with GO term association as aliases
 2. Background reference annotation (GO full or GO slim for each species)
