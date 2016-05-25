@@ -1,1 +1,1 @@
-# Depolyed product descriptions
+# Deployed product descriptions
