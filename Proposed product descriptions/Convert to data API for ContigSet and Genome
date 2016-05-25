@@ -1,0 +1,77 @@
+## Convert to data API for ContigSet and Genome
+
+### Summary
+
+In order to complete our transition to the new Genome object, we need to convert all existing KBase methods AND widgets to using data-API to access genome and contigset data. We will NOT change methods that make new ContigSet or Genome objects. The reason is because this is not strictly necessary for the transition to the new genome object, as the data API will operate against old and new objects. So at the end of this campaign, all methods and widgets will use data API to access genomes and ContigSets, but methods like annotation and assembly will still make the old-style objects. We will not include RNA-seq methods in this sprint, as those should already be done.
+
+### Story/Description
+
+I used Bill's "list_available_methods" to get a complete list of current SDK modules. Then I evaluated which ones would need transitioning by intuition. This will need to be inspected and verified by module owners. I called out some modules that I think are out of scope. The biggest of these is TNseq, which could be a task on the order of the 1-2 sprints by itself.
+
+Non SDK methods that need to be translated to SDK first, then transitioned:
+- Annotate Domains in a Genome
+
+SDK modules that need to be transitioned:
+- fba_tools - Contains all modeling tools
+- kbga - Contains genome annotation methods
+- CoExpression - Contains expression analysis tools
+- CompareGeneContent - Compare the genes in an FBA Model with the genes in an Expression Matrix
+- ElectronicAnnotationMethods - Tools that support ontology
+- PangenomeComparison
+- ProteomeComparison
+- PangenomeOrthomcl
+- SEEDtk
+- SeqComparison
+- WholeGenomeAlignment
+- sdk_ontology
+- HomologySearch
+- KBaseTrees
+
+SDK modules that probably need to be transitioned but out of scope for this PD:
+- RBTnSeq - the devs of this package should do this transition
+- kb_trimmomatic - the devs of this package should do this transition
+- kb_vsearch - the devs of this package should do this transition
+- MEModeling
+
+SDK modules that should already be done by Q3:
+- KBaseRNASeq - Contains all RNAseq tools
+
+Modules that should not be impacted (module-owners: please check and verify):
+- kb_cummerbund
+- MEGAHIT
+- kb_fasttree
+- NGSUtils
+- AssemblyRAST
+- GroCurveFit
+- GrowthDataUtils
+- Muscle
+- GenomeComparison - not needed because this is replaced by PangenomeComparison
+- QIIME
+
+### User Stores
+
+Users should be able to run all KBase functions on either new or old genome typed objects, and everything should work the same. It should make no difference to the user whether they're using an old or new genome object.
+
+### Testing Plan
+
+Ideally, we would like to write a simple code to log every time a genome or contigset typed object is requested from the CI workspace by anything EXCEPT the data API. This will allow us to test whether we have succeeded in completely transitioning to data API for these objects. Unaltered methods will remain visible on the test system so that the behavior of the original method and migrated method can be easily compared. Independent internal testers will execute the migrated methods following any existing tutorials or documentation to ensure consistency.
+
+### Narrative Mockup
+
+The existing methods will be used so the narrative experience will be unchanged.
+
+### Timeline
+
+- Sprint 1
+  -Translate methods and widgets
+  -Test
+  -Evaluate progress
+  
+- Sprint 2
+  -Translate methods and widgets
+  -Test
+  -Evaluate progress
+
+### Citations
+
+N/A
