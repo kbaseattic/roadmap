@@ -49,6 +49,14 @@ servers.
 Bench biologists and 3rd party developers see that NaN and Infinity may be
 represented in KBase object data and used as input to KBase SDK methods.
 
+A user would like to upload and use a collection of RNAseq gene expression
+ratios as a FeatureValue matrix. Some of the genes were never observed in only
+certain samples, hence when creating comparisons between treatment and control
+samples those sample values and sample-to-sample ratios need to allow an NaN
+value corresponding to 'gene was not measured'. This is to distinguish from 0
+values which would correspond to a actual measurement, would be included in
+normalization etc.
+
 ##Narrative Mockup:
 
 N/A
