@@ -1,4 +1,4 @@
-## High Level Product Description Template:
+## High Level Product Description Template
 
 *Proposed KBase apps should also follow the requirements in the [KBase product requirements document](./KBase%20product%20requirements.md). Products that are not apps should follow those requirements where appropriate.*
 
