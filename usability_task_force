@@ -1,0 +1,9 @@
+# Usability Task Force
+Although there is a concerted effort from the UE team to solicit feedback on the existing features of the KBase platform,
+there is no central resource to coordinate, for developers, usability tests of prototypes or mockups of proposed new
+user-facing features. The result is that most developers do not do any usability testing until after most of the design
+and coding work is done, at which point it is much more expensive to make significant changes. This proposal will create
+an ongoing "Usability Task Force" that will maintain a set of resources for all project developers on how and when
+to do usability testing, and will also collect and help present the knowledge gained from these tests. The UTF would
+help conduct tests, record and archive results, and standardize some of the outputs for easy consumption by the rest
+of the project.
